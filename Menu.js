@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-const Util = require('./util');
+const Util = require('./Util');
 
 class Menu {
     static async criaMenu() {
