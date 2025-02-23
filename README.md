@@ -20,16 +20,16 @@ Este é um projeto simples de lista de tarefas utilizando **Node js**, **MySQL**
 ### Configure o projeto
 
 1. **Clone o reporsitório**
-    ´´´bash
+    ```bash
     git clone https://github.com/Mikaelpeganinguem/lista-de-tarefas
 
 2. **Instale as depenências do projeto**
-    ´´´bash
+    ```bash
     npm i
 
 3. **Configure o banco de dados**
 Edite o arquivo **db.js** para corresponder ás configuração do seu banco de dados
-    ´´´bash
+    ```bash
     const Sequelize = require('sequelize');
     const db = new Sequelize('tarefas', 'root', '', {
         dialect: 'mysql',
@@ -39,7 +39,7 @@ Edite o arquivo **db.js** para corresponder ás configuração do seu banco de d
     module.exports = db;
 
 4. **Execute o projeto**
-    ´´´bash
+    ```bash
     npm start
 
 
