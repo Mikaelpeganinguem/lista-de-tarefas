@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-const { criarTarefa, listarTarefas, atualizaStatus, deletaTarefa } = require('./util');
+const Util = require('./util');
 
 class Menu {
     static async criaMenu() {
@@ -46,22 +46,22 @@ class Menu {
     }
 
     static async criarTarefa(){
-        let resposta = await criarTarefa();
+        let resposta = await Util.criarTarefa();
         console.log(resposta);
     }
 
     static async listarTarefas(){
-        let resposta = await listarTarefas();
+        let resposta = await Util.listarTarefas();
         console.log(resposta);
     }
 
     static async atualizaStatus(){
-        let resposta = await atualizaStatus();
+        let resposta = await Util.atualizaStatus();
         console.log(resposta);
     }
 
     static async deletaTarefa(){
-        let resposta = await deletaTarefa();
+        let resposta = await Util.deletaTarefa();
         console.log(resposta);
     }
 
