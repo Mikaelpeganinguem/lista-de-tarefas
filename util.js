@@ -1,7 +1,6 @@
 const Tarefa = require('./db/model/tarefa');
 const prompt = require('prompt-sync')();
 
-
 class Util {
 
     static async criarTarefa() {
@@ -24,11 +23,6 @@ class Util {
             console.error(e.message);
             return "Falha na criação da Tarefa";
         }
-    }
-
-    static async main() {
-        const novaTarefa = await this.criarTarefa();
-        console.log(novaTarefa);
     }
 
     static async listarTarefas() {
@@ -90,12 +84,5 @@ class Util {
         }
     }
 }
-
-Util.main().then(() => {
-    console.log("Operação Bem sucedida!");
-}).catch((e) => {
-    console.log("Erro na operação");
-    console.error(e.message);
-});
 
 module.exports = Util;
