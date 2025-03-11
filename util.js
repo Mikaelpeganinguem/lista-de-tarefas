@@ -32,9 +32,13 @@ class Util {
             return "Nenhuma tarefa cadastrada no momento";
         }
 
-        tarefas.forEach(tarefa => {
-            console.log(`ID: ${tarefa.id} | Titulo: ${tarefa.titulo} | Status: ${tarefa.status}`);
-        });
+        console.table(tarefas.map(tarefa => {
+            return {
+                ID: tarefa.id,
+                Titulo: tarefa.titulo,
+                Status: tarefa.status
+            }
+        }));
     }
 
     static async atualizaStatus() {
